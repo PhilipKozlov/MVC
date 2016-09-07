@@ -2,16 +2,33 @@
 @{
     ViewBag.Title = "Person";
 }
+@section NavBar{
+    @if (Model.Side == "Dark")
+    {
+        <div class="navbar navbar-inverse navbar-fixed-top">
+        </div>
+    }
+    else
+    {
+        <div class="navbar navbar navbar-fixed-top">
+        </div>
+    }
+}
 
 @section Header{
     <h1><b>Faction : @Model.Side</b></h1>
 }
 
-<h2>Person</h2>
-<p>Name : @Model.Name</p>
-<p>Side : @Model.Side</p>
+@section Body{
+    <h2>Person</h2>
+    <p>Name : @Model.Name</p>
+    <p>Side : @Model.Side</p>
+}
 
-@Html.Action("Join", "Side")
+@section Footer
+{
+    @Html.Action("Join", "Side")
+}
 
 
 
