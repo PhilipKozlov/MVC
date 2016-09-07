@@ -16,6 +16,14 @@
 }
 
 @section Header{
+    @if (Model.Side == "Dark")
+    {
+        <img src="~/Content/Images/DarkSide.jpg" alt="Dark side">
+    }
+    else
+    {
+        <img src="~/Content/Images/LightSide.jpg" alt="Dark side">
+    }
     <h1><b>Faction : @Model.Side</b></h1>
 }
 
