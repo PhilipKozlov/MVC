@@ -34,7 +34,7 @@ namespace Views.Controllers
                 }
                 else
                 {
-                    return View("Footer", "LOL. There is no way out. PS your HR manager has been contacted.");
+                    return View("Footer", (object)"LOL. There is no way out. PS your HR manager has been contacted.");
                 }
             }
             return RedirectToAction("Index", "Person");
