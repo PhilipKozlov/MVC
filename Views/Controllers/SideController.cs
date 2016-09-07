@@ -17,17 +17,16 @@ namespace Views.Controllers
 
         }
         // GET: Side
-        [ChildActionOnly]
+        //[ChildActionOnly]
         public ActionResult Join()
         {
             return PartialView("Footer");
         }
 
-        [HttpPost]
-        public ActionResult Join(string answer)
+        public ActionResult SwitchSides(string answer)
         {
             var person = repository.GetAll()[0];
-            if (answer == "yes")
+            if (answer.ToLower() == "yes")
             {
                 if (person.Side != "Dark")
                 {
