@@ -16,8 +16,8 @@ namespace Views.Controllers
             repository = PersonRepository.Instance;
 
         }
-        // GET: Side
-        //[ChildActionOnly]
+
+        [ChildActionOnly]
         public ActionResult Join()
         {
             return PartialView("Footer");

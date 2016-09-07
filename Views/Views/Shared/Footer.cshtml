@@ -5,21 +5,16 @@
 
 @if (string.IsNullOrWhiteSpace(Model))
 {
-    @*using (Html.BeginForm("Join", "Side", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()*@
-
-        <div class="form-horizontal">
-            <h2>Joing other side?</h2>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    @Html.Hidden("answer", Model)
-                    <input name ="answer" type="submit" value="Yes" class="btn btn-default" onclick = "location.href = '@Url.Action("SwitchSides", "Side", new { answer = "Yes" })'"/>
-                    <input name ="answer" type="submit" value="No" class="btn btn-default" onclick = "location.href = '@Url.Action("SwitchSides", "Side", "No")'"/>
-                </div>
+    <div class="form-horizontal">
+        <h2>Joing other side?</h2>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.Hidden("answer", Model)
+                <input name ="answer" type="submit" value="Yes" class="btn btn-default" onclick = "location.href = '@Url.Action("SwitchSides", "Side", new { answer = "Yes" })'"/>
+                <input name ="answer" type="submit" value="No" class="btn btn-default" onclick = "location.href = '@Url.Action("SwitchSides", "Side", new { answer = "No" })'"/>
             </div>
         </div>
-    //}
+    </div>
 }
 else
 {
