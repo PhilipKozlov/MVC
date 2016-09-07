@@ -2,6 +2,12 @@
 @{
     ViewBag.Title = "Person";
 }
+
+@section Scripts
+{
+
+}
+
 @section NavBar{
     @if (Model.Side == "Dark")
     {
@@ -37,6 +43,7 @@
 {
     @Html.Action("Join", "Side")
 }
+
 
 
 
