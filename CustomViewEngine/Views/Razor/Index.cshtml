@@ -1,0 +1,13 @@
+﻿@model string[]
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Fruits</h2>
+<ul>
+    @foreach (var name in Model)
+    {
+        <li><span><b>@name</b></span></li>
+    }
+</ul>
+

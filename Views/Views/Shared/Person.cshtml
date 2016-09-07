@@ -1,0 +1,17 @@
+﻿@model Views.Models.Person
+@{
+    ViewBag.Title = "Person";
+}
+
+@section Header{
+    <h1><b>Faction : @Model.Side</b></h1>
+}
+
+<h2>Person</h2>
+<p>Name : @Model.Name</p>
+<p>Side : @Model.Side</p>
+
+@Html.Action("Join", "Side")
+
+
+
