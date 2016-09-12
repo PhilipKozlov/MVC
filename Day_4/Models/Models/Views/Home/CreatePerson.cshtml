@@ -1,0 +1,31 @@
+﻿@model Models.Models.Person
+
+@{
+    ViewBag.Title = "CreatePerson";
+}
+
+<h2>CreatePerson</h2>
+@using (Html.BeginForm()) 
+{
+    <div class="row">
+        @Html.LabelFor(model => model.PersonId, new { @class = "col-xs-3" })
+        @Html.EditorFor(model => model.PersonId, new { @class = "col-xs-4" } )
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(model => model.FirstName, new { @class = "col-xs-3" })
+        @Html.EditorFor(model => model.FirstName, new { @class = "col-xs-4" })
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(model => model.LastName, new { @class = "col-xs-3" })
+        @Html.EditorFor(model => model.LastName, new { @class = "col-xs-4" })
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(model => model.Role, new { @class = "col-xs-3" })
+        @Html.EditorFor(model => model.Role, new { @class = "col-xs-4" })
+    </div>
+
+    <button name="submit">Submit</button>
+}
